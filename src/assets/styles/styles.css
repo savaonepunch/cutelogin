@@ -1,0 +1,182 @@
+:root {
+  --lightblue:#1496db;
+  --blue: #0183C9;
+  --darkblue: #005685;
+  --gray: rgba(8, 35, 109, 0.5);
+  --lightgray: rgba(8, 35, 109, 0.24);
+  --verylightgray: rgba(8, 35, 109, 0.062);
+}
+
+@font-face {
+  font-family: GilroyBlack;
+  src: url(../fonts/Gilroy-Black.ttf);
+}
+
+@font-face {
+  font-family: GilroyRegular;
+  src: url(../fonts/Gilroy-Bold.ttf);
+}
+
+/* html { 
+  background: url(https://source.unsplash.com/random/1920x1080) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: GilroyRegular;
+}
+
+
+div.login-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2fafe;
+  transition: background-color .2s;
+}
+
+div.login-container div.box {
+  width: 40vw;
+  min-width: 700px;
+  min-height: 480px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: rgba(106, 131, 156, 0.2) 0px 8px 24px;
+  margin: 50px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.login-container div.box h1.header{
+  color: var(--darkblue);
+  margin-top: 40px;
+  margin-bottom: 0;
+  text-align: center;
+
+}
+
+div.login-container div.box p.description{
+  color: var(--gray);
+  text-align: center;
+
+}
+
+div.login-container div.box form.login-form{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 50px;
+  position: relative;
+}
+
+div.login-container div.box form.login-form input{
+  margin-bottom: 40px;
+  padding: 18px;
+  padding-left: 40px;
+  font-family: GilroyRegular;
+  border: 1px solid var(--verylightgray);
+  border-radius: 8px;
+  color: var(--blue);
+}
+
+div.login-container div.box form.login-form input:focus {
+  outline: none;
+  border: 1px solid var(--gray);
+}
+
+div.login-container div.box form.login-form button {
+  outline: none;
+  border: none;
+  padding: 17px;
+  border-radius: 8px;
+  font-family: GilroyRegular;
+  color: white;
+  background-color: var(--blue);
+  transition: .2s;
+  font-size: 100%;
+}
+
+div.login-container div.box form.login-form button:hover {
+  cursor: pointer;
+  background-color: var(--lightblue);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--lightgray);
+  opacity: 1; /* Firefox */
+  font-size: 1.1em;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--gray);
+  font-size: 1.1em;
+
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--gray);
+  font-size: 1.1em;
+
+}
+
+.email-span {
+  color: var(--blue);
+  position: absolute;
+  top: 26px;
+  left: 15px;
+}
+
+.password-span {
+  color: var(--blue);
+  position: absolute;
+  top: 119px;
+  left: 15px;
+}
+
+div.login-container img.logo {
+  width: 64px;
+}
+
+div.login-container p.forgot-password{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: var(--gray)
+}
+
+div.login-container p.forgot-password a{
+  text-decoration: none;
+  color: var(--blue);
+  transition: .9s;
+}
+
+div.login-container p.forgot-password a:hover{
+  text-decoration: underline;
+}
+
+.bg-button{
+  margin-top: 50px;
+  bottom: 50px;
+  color: var(--blue);
+  transition: .2s;
+}
+
+.bg-button:hover{
+  color: var(--lightblue);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 740px) {
+  div.login-container div.box {
+    min-width: 90vw;
+  }
+}
